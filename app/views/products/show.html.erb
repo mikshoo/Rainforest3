@@ -1,2 +1,11 @@
 <%= link_to "Edit Product", edit_product_path(@product) %>
 <%= link_to "Back to Products", products_path %>
+
+<% @products.each do |product| %>
+<p><%= product.name %></p>
+<p><%= product.description %></p>
+<p><%= product.price_in_cents %></p>
+<p><%= product.formatted_price %></p>
+
+
+<% end %>
